@@ -1,0 +1,518 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+.home {
+  width: 100%;
+}
+.home .top_banner {
+  max-width: 100%;
+  height: 395px;
+  background: url("http://localhost:3000/image/slide-1.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 60px;
+}
+.home .top_banner .content {
+  width: 100%;
+  position: relative;
+  top: 20%;
+}
+.home .top_banner .content h3 {
+  margin-bottom: 8px;
+}
+.home .top_banner .content .link {
+  display: block;
+  width: 110px;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #e31414;
+  background-color: chartreuse;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.tranding {
+  width: 100%;
+  padding: 20px 30px;
+}
+.tranding .container {
+  max-width: 100%;
+  display: flex;
+}
+.tranding .container .left-box {
+  width: 70%;
+  padding: 20px 30px;
+}
+.tranding .container .left-box .header {
+  display: flex;
+  max-width: 100%;
+  background-color: rgb(218, 221, 221);
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.tranding .container .left-box .header .heading h2 {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.tranding .container .left-box .header .heading h2:hover {
+  color: #e37814;
+}
+.tranding .container .left-box .header .cate {
+  display: flex;
+}
+.tranding .container .left-box .header .cate h3 {
+  text-transform: capitalize;
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.tranding .container .left-box .header .cate h3:hover {
+  color: #e37814;
+}
+.products .containers .box {
+  max-width: 100%;
+}
+.products .containers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.products .containers .box {
+  width: 206px;
+  height: 300px;
+  /* margin-top: 10px; */
+  margin: 14px 2px;
+  padding: 20px 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.products .containers .box .img_box img {
+  width: 190px;
+  object-fit: cover;
+}
+.products .containers .box {
+  position: relative; /* Ensure that the img_box content is positioned relative to this box */
+}
+
+.products .containers .box .img_box {
+  position: relative;
+}
+
+.products .containers .box .img_box .icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0; /* Make the icons invisible initially */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* When hovering over the product box, show the icons */
+.products .containers .box:hover .img_box .icon {
+  opacity: 1;
+}
+
+/* Styling the icon boxes */
+.products .containers .box .img_box .icon .icon_box {
+  padding: 6px;
+  background: #f5f5f5;
+  color: #cc1e1e;
+  border-radius: 30%; /* Circular icons */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+}
+
+.products .containers .box .img_box .icon .icon_box:hover {
+  color: #f5f5f5;
+  background: #cc1e1e;
+}
+/* Hide the tooltip initially */
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: small;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  right: 110%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.icon_box {
+  position: relative;
+}
+
+.icon_box:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.details {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.details h4 {
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+.details p {
+  color: #e37814;
+}
+.details .link {
+  margin-bottom: 20px;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 10%;
+  color: #d91414;
+  background-color: #7fff00;
+}
+.details .link:hover {
+  background-color: #e37814;
+  color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .tranding .container .left-box .header .heading h2 {
+    font-size: 14px !important;
+  }
+  .tranding .container .left-box .header .cate h3 {
+    font-size: 12px;
+  }
+  .products .containers .box {
+    width: 129px;
+    height: 200px;
+  }
+  .products .containers .box .img_box img {
+    width: 90px;
+    object-fit: cover;
+  }
+  .details h4 {
+    margin-bottom: 2px;
+    font-size: 12px;
+  }
+  .details p {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+  .details .link {
+    font-size: 12px;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 10%;
+    color: #d91414;
+    background-color: #7fff00;
+  }
+  .products .containers .box .img_box .icon {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    font-size: 10px;
+    gap: 5px;
+  }
+  .tooltip {
+    font-size: 8px;
+  }
+  
+}
+.tranding .right-box{
+  width: 30%;
+}
+.tranding .right-box .container {
+  width: 100%;
+  padding: 20px 30px;
+}
+.tranding .right-box .container .testimonial .head {
+  display: flex;
+  max-width: 100%;
+  background-color: rgb(218, 221, 221);
+  padding: 10px 20px;
+}
+.tranding .right-box .container .testimonial .head h3 {
+  width: 100%;
+  text-align: center;
+
+}
+.tranding .right-box .container .testimonial .details {
+  border: 1px solid silver;
+  margin-top: 10px;
+
+}
+.newsletter{
+  background-color: #edecec;
+}
+
+.newsletter .para{
+  color: #545353;
+  text-align: center;
+  margin-top: 10px;
+}
+.newsletter .form{
+  text-align: center;
+}
+.newsletter .form input{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  text-align: center;
+}
+.newsletter .btn{
+  width: 100%;
+  text-align: center;
+}
+.newsletter .btn button{
+  padding: 10px 20px;
+  background-color: #cc1e1e;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.newsletter .btn button:hover{
+  background-color: #e37814;
+}
+.newsletter .social_media{
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+}
+.newsletter .social_media .icon_box{
+  padding: 10px 10px;
+  background-color: #e2dddd;
+  border: none;
+  border-radius: 12px;
+  margin: 5px;
+}
+.newsletter .social_media .icon_box:hover{
+  background-color: #f5f4f8;
+}
+.newsletter .social_media .icon_box .facebook{
+  color: #5409e9;
+}
+
+.newsletter .social_media .icon_box .twitter{
+  color: #28a9e5;
+}
+.newsletter .social_media .icon_box .instagram{
+  color: #ea7373;
+}
+.newsletter .social_media .icon_box .youtube{
+  color: #e90909;
+}
+@media screen and (max-width:768px) {
+  .tranding .right-box .container .testimonial .head {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .tranding .right-box .container .testimonial .head h3 {
+font-size: x-small;
+  }
+  .tranding .right-box .container .testimonial .details{
+    max-width: 100%;
+    margin-top: 0px;
+  }
+  .newsletter{
+    max-width: 100%;
+    margin-top: 0px;
+  }
+  .newsletter .para{
+    font-size: x-small;
+  }
+  .newsletter .form input{
+    width: 100px;
+    font-size: x-small;
+  }
+  .newsletter .btn button{
+    font-size: x-small;
+    margin: 0px auto;
+    padding: 5px 8px;
+  }
+  .newsletter .social_media .icon_box{
+    padding: 10px 10px;
+  }
+  .newsletter .social_media .icon_box {
+    margin: 0px 2px;
+    padding: 2px 4px;
+    font-size: x-small;
+  }
+  .tranding .right-box .container {
+    padding: 10px 2px;
+  }
+  
+}
+
+.home .banners
+{
+    padding: 20px 30px;
+    width: 100%;
+}
+.home .banners .container
+{
+    max-width: 100%;
+    display: flex;
+}
+.home .banners .container .left_box
+{
+    width: 24%;
+}
+.home .banners .container .left_box .box
+{
+    margin-top: 10px;
+}
+.home .banners .container .right_box
+{
+    width: 75%;
+}
+.home .banners .container .right_box .top
+{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.home .banners .container .right_box .bottom
+{
+    max-width: 100%;
+    margin-top: 10px;
+}
+.home .banners .container .right_box .bottom img
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.home .product_type
+{
+    padding: 20px 30px;
+    width: 100%;
+}
+.home .product_type .container
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.home .product_type .container .box
+{
+    width: 360px;
+    height: 650px;
+    border: 3px solid #f6f7f8;
+    overflow: hidden;
+}
+.home .product_type .container .box .header
+{
+    width: 100%;
+    height: 50px;
+    background: #f6f6f6;
+    padding: 10px 10px;
+}
+.home .product_type .container .box .header h2
+{
+    color: #232323;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.home .product_type .container .box .productbox
+{
+    width: 100%;
+    height: 120px;
+    padding: 10px 10px;
+    border: 1px solid #f6f7f8;
+    display: flex;
+    margin-top: 30px;
+}
+.home .product_type .container .box .productbox .img-box img
+{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.home .product_type .container .box .productbox .detail
+{
+    margin-left: 30px;
+}
+.home .product_type .container .box .productbox .detail h3
+{
+    font-size: 14px;
+    color: #8a8a8a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.home .product_type .container .box .productbox .detail p
+{
+    margin-top: 5px;
+    color: #cd1e76;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.home .product_type .container .box .productbox .detail .icon
+{
+    margin-top: 10px;
+    display: flex;
+}
+.home .product_type .container .box .productbox .detail .icon button
+{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 10px 10px;
+    border: 2px solid #f6f7f8;
+    margin-left: 10px;
+    border-radius: 50%;
+    color: #8a8a8a;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.home .product_type .container .box .productbox .detail .icon button:hover
+{
+    background: #f6f6f6;
+    color: #232323;
+}
+@media screen  and (max-width:786px){
+  
+  .home .banners .container .left_box .box img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .home .banners .container .right_box .top img{
+    width: 49%;
+    margin-left: 10px;
+  }.home .banners .container .right_box .bottom img{
+    width: 100%;
+    margin-left: 10px;
+
+  }
+  .home .product_type .container .box .productbox {
+    display:contents;
+  }
+  .home .product_type .container .box .productbox .img-box{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .home .product_type .container .box {
+    height: 850px;
+  }
+  .products .containers .box{
+    width: 124px;
+  }
+  
+}

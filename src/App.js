@@ -1,25 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Navabr from "./components/Navbar/Navbar";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRouter from "./router/router";
+import Footer from "./components/Footer/Footer";
+import HomeProduct from "./components/Home/HomeProduct";
 
-function App() {
+export default function App() {
+  const [shop, setShop] = useState(HomeProduct);
+  const [search, setSearch] = useState("");
+  const [cart, setCart] = useState([]);
+
+  // Filter function for category filter
+  const Filter = (x) => {
+    const catefilter = HomeProduct.filter((product) => {
+      return product.cat === x;
+    });
+    setShop(catefilter);
+  };
+  const allcatefilter = () => {
+    setShop(HomeProduct);
+  };
+  //Shop Search Filter
+  const searchlength = (search || []).length === 0;
+  const searchProduct = () => {
+    if (searchlength) {
+      alert("Please Search Something !");
+      setShop(HomeProduct);
+    } else {
+      const searchfilter = HomeProduct.filter((x) => {
+        return x.cat === search;
+      });
+      setShop(searchfilter);
+    }
+  };
+  //Add Cart Functionality Here
+  const addCart = (product) => {
+    // Add to cart functionality here
+    const exist = cart.find((c) => {
+      return c.id === product.id;
+    })
+    if (exist) {
+      alert("Product Already Added to Cart");
+      return;
+    } else {
+      setCart([...cart, { ...product, qty: 1 }]);
+      alert("Product Added to Cart");
+    }
+  };
+  console.log(cart);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navabr
+        cart={cart}
+          search={search}
+          setSearch={setSearch}
+          searchProduct={searchProduct}
+        />
+        <AppRouter
+        setCart={setCart}
+        cart={cart}
+          shop={shop}
+          filter={Filter}
+          allcatefilter={allcatefilter}
+          addCart={addCart}
+        />
+        <Footer />
+      </Router>
+    </>
   );
 }
-
-export default App;

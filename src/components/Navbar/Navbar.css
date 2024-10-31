@@ -1,0 +1,195 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+.header {
+  width: 100%;
+}
+
+.header .top_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 10px 10px;
+  background-color: aliceblue;
+}
+
+.header .top_header .icon {
+  font-size: 19px;
+  color: rgb(126, 20, 20);
+  margin-left: 10px;
+}
+
+.header .top_header .info p {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.header .top_header .right-section {
+  display: flex;
+  margin-left: auto; 
+}
+
+.header .top_header .right-section .icon {
+  margin-left: 20px;
+}
+
+.header .mid_header {
+  display: flex;
+  max-width: 100%;
+  padding: 20px;
+  justify-content:space-between;
+}
+.header .mid_header .logo {
+  object-fit: cover;
+  cursor: pointer;
+  max-height: 35px;
+}
+
+.header .mid_header .search_box input{
+padding: 10px 10px;
+background-color: silver;
+outline: none;
+border: none;
+  border-radius: 3px;
+}
+.header .mid_header .search_box input:hover{
+  background-color: rgb(250, 242, 243);
+  }
+.header .mid_header .search_box button{
+  padding: 10px 10px;
+  outline: none;
+  border: none;
+  border-radius: 2px ;
+  background-color: rgb(197, 39, 108);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 600;
+  margin-right: 30px;
+  }
+  .header .mid_header .search_box button:hover{
+    background-color: rgb(129, 197, 39);
+    }
+    .header .mid_header .user{
+      display: flex;
+      margin-right: 20px;
+    }
+    .header .mid_header .user .icon{
+      margin-right: 4px;
+      color: white;
+      background-color: rgb(197, 39, 108);
+      padding: 10px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    .header .mid_header .user button{
+      font-weight: 300;
+      color: white;
+      background-color: rgb(197, 39, 108);
+      padding: 10px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    .header .mid_header .user button:hover{
+      color: white;
+      background-color: rgb(248, 8, 8);
+    }
+ 
+    .last_header{
+      background-color: rgb(197, 39, 108);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .last_header .userInfo{
+      color: aliceblue;
+    }
+    .last_header .nav ul{
+      display: flex;
+      margin-top: 10px;
+      
+    }
+    .last_header .nav ul  li{
+      list-style:none;
+    }
+    .last_header .nav ul  li .link{
+      color: aliceblue;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 20px;
+      transition: 0.5s;
+    }
+    .last_header .nav ul  li .link:hover{
+      color: rgb(151, 212, 21);
+      font-weight: 900;
+      border: 2px solid;
+      padding: 10px 10px;
+      border-radius: 10%;
+    }
+    .last_header .cart{
+      display: flex;
+      margin-top: 10px;
+    }
+    .last_header .cart .icon{
+      margin-right: 5px;
+      color: rgb(252, 248, 248);
+      font-size:x-large;
+      cursor: pointer;
+    }
+    .last_header .cart .btn{
+      color: white;
+      background-color: rgb(197, 39, 108);
+    }
+    .last_header .cart .btn button{
+      background-color: rgb(244, 242, 243);
+      border: none;
+      border-radius: 3px;
+      padding: 7px 7px;
+      cursor: pointer;
+    }
+    .last_header .cart .btn button:hover{
+      background-color: rgb(126, 197, 39);
+    }
+    @media screen and (max-width: 768px) {
+      .header .mid_header .logo {
+        max-height: 15px;
+        max-width: 60px;
+      }
+      
+      
+        .header .mid_header .user {
+          margin: 0px;
+        }
+        .header .mid_header .search_box button{
+          margin: 0px;
+        }
+        .header .mid_header .logo  img{
+          height: 30px !important;
+          width: 90px ;
+          margin-top: 5px;
+        
+        }
+        #shiiping {
+          display: none;
+        }
+        
+    }
+    @media screen and (max-width: 768px) {
+      .last_header .userInfo{
+        max-width: 20px;
+        margin-right: 40px;
+      
+      }
+      .last_header .nav ul  li .link:hover{
+        color: rgb(151, 212, 21);
+        font-weight: 100;
+        border: 1px solid;
+        padding: 6px 6px;
+        border-radius: 6%;
+      }
+    }

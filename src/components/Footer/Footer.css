@@ -1,0 +1,166 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.footer
+{
+    width: 100%;
+    padding: 30px 40px;
+    background: #f6f6f6;
+}
+.footer .container
+{
+    display: flex;
+    max-width: 100%;
+}
+.footer .container .left-box
+{
+    width: 30%;
+    padding: 20px 20px;
+    border-right: 2px solid #b8b7b7;
+}
+.footer .container .left-box .box
+{
+display: flex;
+}
+.footer .container .left-box .box .icon-box
+{
+    padding: 10px;
+    color: #C5276C;
+    font-size: 30px;
+}
+.footer .container .left-box .box .details {
+    display: flex;
+    flex-direction: column; /* Stack h3 and p vertically */
+    align-items: flex-start; /* Align them to the left */
+    padding: 10px;
+}
+
+.footer .container .left-box .box .details h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #C5276C;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0; /* Ensure no extra margin */
+    margin-bottom: 4px;
+}
+
+.footer .container .left-box .box .details p {
+    font-size: 14px;
+    color: #232323;
+    margin: 0; 
+  }
+  .footer .container .right-box
+  {
+      padding: 10px 20px;
+      width: 69%;
+  }
+  .footer .container .right-box .top{
+    max-width: 100%;
+  }
+  .footer .container .right-box .top .logo {
+    margin-left: 40%;
+  }
+  .footer .container .right-box .center{
+    max-width: 100%;
+  }
+  .footer .container .right-box .center .para p{
+    color: #b8b7b7;
+    font-size: 14px;
+    word-spacing: 2px;
+    padding: 10px;
+   }
+
+   .footer .container .right-box .bottom{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:10px 40px;
+  }
+  .footer .container .right-box .bottom .heading h3{
+    color: #232323;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin:10px;
+  }
+ 
+  .footer .container .right-box .bottom .heading .list ul li{
+    list-style-type: none;
+    margin:10px;
+
+  }
+  .footer .container .right-box .bottom .heading .list ul li:hover{
+   color: #C5276C;
+  }
+  .copyright{
+    margin-top: 20px;
+    text-align: center;
+    color: #232323;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+  }
+  @media  screen and (max-width: 568px){
+   
+  .footer{
+    padding: 0px;
+   margin: 0px;
+    
+  }
+  .footer .container .left-box{
+    border-right: none;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+  }
+  .footer .container .left-box .box .icon-box{
+    font-size: 20px;
+    padding: 6px;
+  }
+  .footer .container .left-box .box .details {
+    padding: 0px !important;
+    margin: 0px
+  }
+  .footer .container .left-box .box .details h3{
+    font-size: 12px;
+  }
+  .footer .container .left-box .box .details p{
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  .footer .container .right-box{
+    margin: 10px;
+    padding: 10px;
+ 
+  }
+  .footer .container .right-box .top .logo {
+    margin-left: 20%;
+  }
+  .footer .container .right-box .top .logo img{
+    width: 40%;
+  }
+  .footer .container .right-box .center .para p{
+    font-size: 12px;
+  }
+  .footer .container .right-box .bottom {
+    padding: 0px;
+    margin: 0px;
+  }
+  .footer .container .right-box .bottom .heading h3{
+    font-size: 12px;
+  }
+  .footer .container .right-box .bottom .heading .list ul li{
+    font-size: 12px;
+    margin: 6px;
+  }
+  
+  
+ 
+  }
